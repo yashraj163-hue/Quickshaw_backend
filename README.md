@@ -34,6 +34,11 @@ QuickShaw is designed as a two-sided system, addressing the distinct needs of bo
 - [Pooling Logic (Stage-1 MVP)](docs/pooling-logic.md)
 - [User vs Driver View](docs/user-vs-driver.md)
 
+  ## Repo Structure
+
+- `public/` → UI mockups (user + driver)
+- `docs/` → product logic and system notes
+
 ---
 
 ## User App Interface

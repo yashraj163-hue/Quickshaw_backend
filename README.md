@@ -113,3 +113,24 @@ Planned areas of expansion include:
 These enhancements are deferred to Stage-2 to preserve MVP simplicity
 and reduce operational risk during early deployment.
 
+
+## Project Scope & Disclaimer
+
+This project is a **product and system design case study** rather than a full production implementation.
+
+It focuses on:
+- Product thinking and UX-driven decisions
+- Rule-based pooling logic and matching constraints
+- Asymmetric information design between users and drivers
+
+It intentionally excludes:
+- Backend implementation details
+- Real-time APIs or live data integrations
+- Production-scale performance optimization
+
+The primary goal of this project is to demonstrate **system-level thinking,
+scope control, and product-oriented decision-making**,
+not to deliver a fully engineered application.
+
+
+

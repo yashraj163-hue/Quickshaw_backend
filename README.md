@@ -1,42 +1,142 @@
-# quickshaw
+**TL;DR**  
+QuickShaw is a two-sided pooled mobility concept for short-distance travel
+in Tier-2 and Tier-3 cities, built around driver-first economics and
+basket-based pooling logic.
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
-## Getting Started
+# QuickShaw
 
-First, run the development server:
+QuickShaw is a basket-based pooled mobility platform designed for short-distance travel in Tier-2 and Tier-3 cities.
+
+The system focuses on rickshaws and e-autos, enabling efficient real-time pooling for both passengers and drivers in high-frequency, low-distance urban mobility scenarios.
+
+---
+
+## Contribution Notice
+
+This repository documents my contribution work on **UI structure, product-level documentation, and visual assets**.  
+The original concept and core backend implementation belong to the project owner.
+
+My focus areas in this repository include:
+- Interface structure and clarity
+- Product positioning and documentation
+- Visual asset organization and usage
+
+---
+
+## Two-Sided Platform
+
+QuickShaw is designed as a two-sided system, addressing the distinct needs of both riders and drivers:
+
+- **User App**  
+  Designed for passengers booking short pooled rides with minimal friction and fast decision-making.
+
+- **Driver App**  
+  Built for rickshaw and e-auto drivers to manage pooled trips, demand visibility, and operational flow.
+
+  ## Documentation
+
+- [Problem & Business Model](docs/docs/problem-and-model.md)
+- [Pooling Logic (Stage-1 MVP)](docs/docs/pooling-logic.md)
+- [User vs Driver View](docs/docs/user-vs-driver.md)
+
+  ## Repo Structure
+
+- `public/` → UI mockups (user + driver)
+- `docs/` → product logic and system notes
+
+---
+
+## User App Interface
+
+The user interface prioritizes simplicity and speed, allowing passengers to quickly book short-distance pooled rides without relying on complex maps or fare structures.
+
+The experience is optimized for frequent, everyday usage rather than occasional long-distance trips.
+
+![User UI](public/quickshaw-user-ui.png)
+
+---
+
+## Driver App Interface
+
+The driver interface focuses on operational efficiency by exposing pooling logic, demand heat zones, and real-time rider requests.
+
+It is designed to support high-frequency decision-making in dense urban environments.
+
+![Driver UI](public/quickshaw-driver-ui.png)
+
+---
+
+## Product Positioning
+
+QuickShaw targets short-distance pooled mobility use cases in Tier-2 and Tier-3 cities, where high-cost, cab-oriented platforms are not practical for daily commuting.
+
+The platform prioritizes:
+- Affordability
+- High-frequency usage
+- Driver-first economics  
+
+over commission-heavy, long-distance ride-hailing models.
+
+---
+
+## Development Setup
+
+This is a Next.js project bootstrapped with `create-next-app`.
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Future Scope (Stage-2)
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+The following capabilities are intentionally scoped for post-MVP iterations.
+Stage-2 focuses on optimization and scalability once core pooling behavior
+and driver adoption are validated.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+Planned areas of expansion include:
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Weighted pooling metrics**  
+  Pooling decisions that consider user waiting tolerance and driver idle time,
+  rather than fixed thresholds.
 
-## Learn More
+- **Dynamic fare adjustments**  
+  Introduction of waiting fees, cancellation penalties, and incentive balancing
+  to improve reliability without reverting to commission-based pricing.
 
-To learn more about Next.js, take a look at the following resources:
+- **“Pool on the Go” matching**  
+  Direction-based pooling that allows riders to be matched while vehicles
+  are already in motion, increasing utilization during peak hours.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+- **Expanded demand intelligence**  
+  More granular heatmap signals to support driver decision-making across
+  time-of-day and location patterns.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Scalable location architecture**  
+  Transition from region-specific configuration to a scalable location
+  database supporting multi-city expansion.
 
-## Deploy on Vercel
+These enhancements are deferred to Stage-2 to preserve MVP simplicity
+and reduce operational risk during early deployment.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+## Project Scope & Disclaimer
+
+This project is a **product and system design case study** rather than a full production implementation.
+
+It focuses on:
+- Product thinking and UX-driven decisions
+- Rule-based pooling logic and matching constraints
+- Asymmetric information design between users and drivers
+
+It intentionally excludes:
+- Backend implementation details
+- Real-time APIs or live data integrations
+- Production-scale performance optimization
+
+The primary goal of this project is to demonstrate **system-level thinking,
+scope control, and product-oriented decision-making**,
+not to deliver a fully engineered application.
+
+
+
